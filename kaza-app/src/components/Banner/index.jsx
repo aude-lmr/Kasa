@@ -1,8 +1,8 @@
-import Cards from "../../components/Cards";
 import styled from "styled-components";
 import bannerHome from "../../assets/home-background.png";
+//import bannerAbout from "../../assets/home-background.png";
 
-const BannerHome = styled.div`
+const BannerContainer = styled.div`
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ const BackgroundFilter = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: brightness(0.8) contrast(100%);
+  backdrop-filter: brightness(0.8) contrast(110%);
   border-radius: 30px;
 `;
 
@@ -31,19 +31,16 @@ const Text = styled.h1`
   color: #ffffff;
   font-size: 60px;
   font-weight: normal;
-  z-index: 1;
+  z-index: 2;
 `;
 
-function Home() {
+function Banner({ background }) {
   return (
-    <div>
-      <BannerHome>
-        <BackgroundFilter />
-        <Text>Chez vous, partout et ailleurs</Text>
-      </BannerHome>
-      <Cards />
-    </div>
+    <BannerContainer style={{ background: background }}>
+      <BackgroundFilter />
+      <Text>Chez vous, partout et ailleurs</Text>
+    </BannerContainer>
   );
 }
 
-export default Home;
+export default Banner;

@@ -11,8 +11,3 @@ export const StyledLink = styled(Link)`
     text-decoration: underline;
   }
 `;
-
-export const StyledList = styled.ul`
-  list-style: none;
-  font-size: 25px;
-`;
