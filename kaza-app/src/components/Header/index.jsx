@@ -1,17 +1,10 @@
-//import colors from "../../../utils/style/colors";
 import { StyledLink } from "../../utils/style/shared-styles";
 import Logo from "../../assets/LOGO.png";
-import styled from "styled-components";
-
-const NavContainer = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import styled from "./header.module.scss";
 
 function Header() {
   return (
-    <NavContainer>
+    <div className={styled.navContainer}>
       <img src={Logo} alt="Logo" />
       <nav>
         <div>
@@ -19,7 +12,7 @@ function Header() {
           <StyledLink to="/About"> A Propos</StyledLink>
         </div>
       </nav>
-    </NavContainer>
+    </div>
   );
 }
 
