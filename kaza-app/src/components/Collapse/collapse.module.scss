@@ -1,0 +1,47 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6060;
+  border-radius: 10px;
+  border: #ff6060;
+  height: 60px;
+  font-size: 40px;
+  padding: 0 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+span {
+  display: block;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: auto;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.title {
+  color: #fff;
+  font-size: 30px;
+}
+
+.text {
+  background-color: #f6f6f6;
+  color: #ff6060;
+  font-size: 29px;
+  padding: 25px 20px 30px 20px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 30px;
+}

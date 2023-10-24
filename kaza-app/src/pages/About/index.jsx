@@ -1,27 +1,45 @@
-// import colors from "../../utils/style/colors";
-// import styled from "styled-components";
-// import about from "../../datas/about.json";
 import Header from "../../components/Header";
 import Banner from "../../components/Banner";
-import Footer from "../../components/Footer";
+//import Footer from "../../components/Footer";
 import bannerAbout from "../../assets/about-background.png";
+import { Collapse } from "../../components/Collapse";
+import styled from "../../components/Collapse/collapse.module.scss";
+
+const aboutDatas = [
+  {
+    id: 1,
+    title: "Fiabilité",
+    text: "Les annonces postées sur Kaza garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équies.",
+  },
+  {
+    id: 2,
+    title: "Respect",
+    text: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+  },
+  {
+    id: 3,
+    title: "Service",
+    text: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+  },
+  {
+    id: 4,
+    title: "Sécurité",
+    text: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestiques pour nos hôtes.",
+  },
+];
 
 function About() {
   return (
     <div>
       <Header />
       <Banner imgSrc={bannerAbout} />
-      {/* <div className="container">
-        {about.map(({ id, text, title }) => (
-          <StyledList>
-            <Element key={id}>
-              <Title>{title}</Title>
-              <div>{text}</div>
-            </Element>
-          </StyledList>
+      <div className={styled.container}>
+        {aboutDatas.map(({ id, text, title }) => (
+          <Collapse key={id} text={text} title={title} />
         ))}
-      </div> */}
-      <Footer />
+      </div>
+
+      {/* <Footer /> */}
     </div>
   );
 }

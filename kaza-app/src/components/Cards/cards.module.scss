@@ -1,15 +1,17 @@
 .cardContainer {
+  border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px;
+  padding: 80px 60px;
+  grid-gap: 70px;
   justify-items: center;
+  background-color: #f6f6f6;
 }
 
 .card {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border: 1px solid #ccc;
-  border-radius: 10px;
   position: relative;
   background: linear-gradient(
     180deg,
@@ -41,4 +43,10 @@
   height: 100%;
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
   /* Vous pouvez ajuster l'opacité (0.5 dans ce cas) selon vos besoins */
+}
+
+.card,
+.Img,
+.overlayClass::before {
+  border-radius: 15px;
 }
