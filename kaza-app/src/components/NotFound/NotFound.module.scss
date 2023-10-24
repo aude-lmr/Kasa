@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error {
+  font-size: 270px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: 25%;
+}
+
+.message {
+  font-size: 40px;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  font-weight: normal;
+}
+
+.Link {
+  font-size: 25px;
+  position: absolute;
+  top: 80%;
+}
+
+.error,
+.message,
+.Link {
+  color: #ff6060;
+}
