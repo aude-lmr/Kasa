@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Cards(props) {
   return (
-    <Link to={URL_APPARTMENT.replace(props.appartment.id)}>
+    <Link to={URL_APPARTMENT.replace(":id", props.appartment.id)}>
       <div className={styles.card}>
         <div className={styles.overlayClass}></div>
         <img className={styles.Img} src={props.appartment.cover} alt="cover" />
