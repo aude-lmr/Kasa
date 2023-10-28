@@ -7,14 +7,16 @@ export const Collapse = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   return isOpen ? (
     <>
-      <button onClick={() => setIsOpen(false)}>
-        <span className={styled.title}>{props.title}</span>
+      <div>
+        <button onClick={() => setIsOpen(false)}>
+          <span className={styled.title}>{props.title}</span>
 
-        <FontAwesomeIcon className={styled.icon} icon={faChevronUp} />
-      </button>
+          <FontAwesomeIcon className={styled.icon} icon={faChevronUp} />
+        </button>
 
-      <div className={styled.text}>
-        <p>{props.text}</p>
+        <div className={styled.text}>
+          <p>{props.text}</p>
+        </div>
       </div>
     </>
   ) : (

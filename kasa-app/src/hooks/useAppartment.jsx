@@ -5,7 +5,9 @@ export function useAppartment(id) {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("./datas/appartments.json");
+      const response = await fetch(
+        "http://localhost:3000/datas/appartments.json"
+      );
       const data = await response.json();
 
       const foundAppartment = data.find((item) => item.id === id);
