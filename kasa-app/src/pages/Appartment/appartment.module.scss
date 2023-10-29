@@ -4,6 +4,17 @@
   gap: 20px;
 }
 
+.apptInfosContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apptTitle {
+  margin-bottom: 30px;
+}
+
 .equipmentsList {
   display: flex;
   flex-direction: column;
@@ -20,5 +31,20 @@
   margin: 0;
 }
 .location {
-  font-size: 30px;
+  font-size: 35px;
+  margin: 5px 0 35px 0;
+}
+
+.hostInfos {
+  display: flex;
+  flex-direction: row;
+}
+
+.hostName {
+  font-size: 40px;
+  color: #ff6060;
+}
+
+.hostPicture {
+  border-radius: 50%;
 }

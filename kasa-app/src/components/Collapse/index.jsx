@@ -8,20 +8,20 @@ export const Collapse = (props) => {
   return isOpen ? (
     <>
       <div>
-        <button onClick={() => setIsOpen(false)}>
+        <button className={styled.collapseBtn} onClick={() => setIsOpen(false)}>
           <span className={styled.title}>{props.title}</span>
 
           <FontAwesomeIcon className={styled.icon} icon={faChevronUp} />
         </button>
 
-        <div className={styled.text}>
-          <p>{props.text}</p>
+        <div className={styled.textContainer}>
+          <p className={styled.collapseTxt}>{props.text}</p>
         </div>
       </div>
     </>
   ) : (
     <>
-      <button onClick={() => setIsOpen(true)}>
+      <button className={styled.collapseBtn} onClick={() => setIsOpen(true)}>
         <span className={styled.title}>{props.title}</span>
         <FontAwesomeIcon
           className={styled.icon}

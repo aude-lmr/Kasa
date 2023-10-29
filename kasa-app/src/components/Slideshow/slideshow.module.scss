@@ -1,0 +1,52 @@
+.slideshow {
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  & .slideshowSlide {
+    border-radius: 25px;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+  }
+  & .slideshowInactive {
+    opacity: 0.7;
+  }
+
+  & .slideshowActive {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    position: relative;
+
+    & .slideshowPagination {
+      position: absolute;
+      bottom: 30px;
+      width: 40px;
+      left: calc(50% - 20px);
+      font-size: 18px;
+      font-weight: 500;
+      color: #ff6060;
+    }
+  }
+
+  & .arrow {
+    width: 95px;
+    height: 120px;
+    position: absolute;
+    top: 135px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  & .left {
+    left: 0;
+  }
+
+  & .right {
+    right: 0;
+  }
+
+  & .none {
+    display: none;
+  }
+}

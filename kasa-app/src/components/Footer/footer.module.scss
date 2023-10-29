@@ -1,0 +1,22 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 122px;
+  height: 40px;
+  position: relative;
+  top: 60px;
+}
+
+.notice {
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+  top: 69px;
+}

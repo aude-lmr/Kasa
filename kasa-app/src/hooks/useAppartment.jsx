@@ -16,7 +16,7 @@ export function useAppartment(id) {
     }
 
     fetchData();
-  }, [id]);
+  }, [id, appartment]);
   return {
     appartment,
   };

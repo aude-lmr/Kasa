@@ -1,9 +1,9 @@
 import Header from "../../components/Header";
 import Banner from "../../components/Banner";
-//import Footer from "../../components/Footer";
+import Footer from "../../components/Footer";
 import bannerAbout from "../../assets/about-background.png";
 import { Collapse } from "../../components/Collapse";
-import styled from "../../components/Collapse/collapse.module.scss";
+import styled from "../About/about.module.scss";
 
 const aboutDatas = [
   {
@@ -30,7 +30,7 @@ const aboutDatas = [
 
 function About() {
   return (
-    <div>
+    <>
       <Header />
       <Banner imgSrc={bannerAbout} />
       <div className={styled.container}>
@@ -39,8 +39,8 @@ function About() {
         ))}
       </div>
 
-      {/* <Footer /> */}
-    </div>
+      <Footer />
+    </>
   );
 }
 
