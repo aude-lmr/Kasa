@@ -7,7 +7,7 @@ import "normalize.css";
 
 const GlobalStyle = createGlobalStyle`
 body {
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: Montserrat, Helvetica, sans-serif;
   margin: 50px 250px;
 }
 `;
