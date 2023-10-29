@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useAppartment(id) {
-  const [appartment, setData] = useState([]);
+  const [appartment, setData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -16,7 +16,7 @@ export function useAppartment(id) {
     }
 
     fetchData();
-  }, [id, appartment]);
+  }, [id]);
   return {
     appartment,
   };
