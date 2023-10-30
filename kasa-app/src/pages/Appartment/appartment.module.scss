@@ -59,3 +59,17 @@
   padding: 10px 0;
   list-style: none;
 }
+
+.apptTagsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.tags {
+  background-color: #ff6060;
+  color: #fff;
+  font-size: 31px;
+  margin-right: 30px;
+  padding: 15px 50px;
+  border-radius: 40px;
+}

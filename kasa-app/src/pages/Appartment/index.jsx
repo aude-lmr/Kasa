@@ -18,24 +18,36 @@ export const Appartment = () => {
       <Header />
       <Slideshow slides={appartment.pictures} />
 
-      <div className={styled.apptInfosContainer}>
-        <div className={styled.apptTitle}>
-          <h1 className={styled.appartmentName}>{appartment.title}</h1>
-          <p className={styled.location}>{appartment.location}</p>
-        </div>
-
-        <div className={styled.hostInfosContainer}>
-          <div className={styled.hostInfos}>
-            <p className={styled.hostName}>{appartment.host.name}</p>
-            <img
-              className={styled.hostPicture}
-              src={appartment && appartment.host.picture}
-              alt={appartment && appartment.host.name}
-            />
+      <section>
+        <div className={styled.apptInfosContainer}>
+          <div>
+            <div className={styled.apptTitle}>
+              <h1 className={styled.appartmentName}>{appartment.title}</h1>
+              <p className={styled.location}>{appartment.location}</p>
+            </div>
+            <div className={styled.apptTagsContainer}>
+              {appartment.tags.map((tags, index) => {
+                return (
+                  <p className={styled.tags} key={index}>
+                    {tags}
+                  </p>
+                );
+              })}
+            </div>
           </div>
-          <Rating score={appartment && appartment.rating} />
+          <div className={styled.hostInfosContainer}>
+            <div className={styled.hostInfos}>
+              <p className={styled.hostName}>{appartment.host.name}</p>
+              <img
+                className={styled.hostPicture}
+                src={appartment && appartment.host.picture}
+                alt={appartment && appartment.host.name}
+              />
+            </div>
+            <Rating score={appartment && appartment.rating} />
+          </div>
         </div>
-      </div>
+      </section>
       <div className={styled.collapseContainer}>
         <Collapse title={"Description"}>
           <p className={styled.collapseTxt}>{appartment.description}</p>
