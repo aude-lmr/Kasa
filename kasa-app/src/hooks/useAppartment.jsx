@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function useAppartment(id) {
   const [appartment, setData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -12,11 +14,14 @@ export function useAppartment(id) {
 
       const foundAppartment = data.find((item) => item.id === id);
 
+      if (!foundAppartment) {
+        navigate("*");
+      }
       setData(foundAppartment);
     }
 
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
   return {
     appartment,
   };

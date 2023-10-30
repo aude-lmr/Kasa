@@ -15,12 +15,13 @@ const Slideshow = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
   return (
-    // <div>
-    //   <h1>SLIDESHOW</h1>
-    // </div>
     <div className={styled.slideshow}>
       <img
-        className={`length === 1 ? "none" : "left arrow" ${styled.arrow} ${styled.left} `}
+        className={`${
+          length === 1
+            ? "none " + styled.none
+            : "left arrow " + styled.arrow + " " + styled.left
+        }`}
         onClick={prevSlide}
         src={left}
         alt="précédent"
@@ -29,9 +30,11 @@ const Slideshow = ({ slides }) => {
         return (
           <div
             key={index}
-            className={`index === current ? ${"slideshowActive"} ${
-              styled.slideshowActive
-            } : ${"slideshowInactive"} ${styled.slideshowInactive}`}
+            className={
+              index === current
+                ? `slideshowActive ${styled.slideshowActive}`
+                : `slideshowInactive ${styled.slideshowInactive}`
+            }
           >
             {index === current && (
               <img
@@ -49,7 +52,11 @@ const Slideshow = ({ slides }) => {
         );
       })}
       <img
-        className={`length === 1 ? "none" : "right arrow" ${styled.arrow} ${styled.right}`}
+        className={
+          length === 1
+            ? `none ${styled.none}`
+            : `right arrow ${styled.arrow} ${styled.right}`
+        }
         onClick={nextSlide}
         src={right}
         alt="suivant"
