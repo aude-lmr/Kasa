@@ -38,7 +38,7 @@ export const Appartment = () => {
       </div>
       <div className={styled.collapseContainer}>
         <Collapse title={"Description"}>
-          <p className="{styled.collapseTxt}">{appartment.description}</p>
+          <p className={styled.collapseTxt}>{appartment.description}</p>
         </Collapse>
 
         <Collapse title={"Equipements"} className={styled.equipmentsList}>
