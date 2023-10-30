@@ -9,8 +9,8 @@
 }
 
 .card {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border: 1px solid #ccc;
   position: relative;
   background: linear-gradient(
@@ -21,11 +21,11 @@
 }
 
 .title {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: normal;
   position: absolute;
-  bottom: 10px;
-  left: 35px;
+  bottom: 5px;
+  left: 20px;
   color: white;
 }
 

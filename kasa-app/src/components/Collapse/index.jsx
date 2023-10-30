@@ -14,9 +14,7 @@ export const Collapse = (props) => {
           <FontAwesomeIcon className={styled.icon} icon={faChevronUp} />
         </button>
 
-        <div className={styled.textContainer}>
-          <p className={styled.collapseTxt}>{props.text}</p>
-        </div>
+        <div className={styled.textContainer}>{props.children}</div>
       </div>
     </>
   ) : (

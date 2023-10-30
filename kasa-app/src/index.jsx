@@ -8,7 +8,9 @@ import "normalize.css";
 const GlobalStyle = createGlobalStyle`
 body {
   font-family: Montserrat, Helvetica, sans-serif;
-  margin: 50px 250px;
+  overflow-x: auto;
+  // margin: 50px 250px;
+    margin: 0 300px;
 }
 `;
 

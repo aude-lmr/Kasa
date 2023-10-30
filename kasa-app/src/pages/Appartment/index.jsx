@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Rating from "../../components/Rating";
 import styled from "../Appartment/appartment.module.scss";
 import Slideshow from "../../components/Slideshow";
+import Footer from "../../components/Footer";
 
 export const Appartment = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ export const Appartment = () => {
 
         <div className={styled.hostInfosContainer}>
           <div className={styled.hostInfos}>
-            <p>{appartment.host.name}</p>
+            <p className={styled.hostName}>{appartment.host.name}</p>
             <img
               className={styled.hostPicture}
               src={appartment && appartment.host.picture}
@@ -36,19 +37,23 @@ export const Appartment = () => {
         </div>
       </div>
       <div className={styled.collapseContainer}>
-        <Collapse title={"Description"} text={appartment.description} />
-        <Collapse
-          title={"Equipements"}
-          text={appartment.equipments.map((equip, index) => {
-            return (
-              <ul key={index}>
-                <li>{equip}</li>
-              </ul>
-            );
-          })}
-          className={styled.equipmentsList}
-        />
+        <Collapse title={"Description"}>
+          <p className="{styled.collapseTxt}">{appartment.description}</p>
+        </Collapse>
+
+        <Collapse title={"Equipements"} className={styled.equipmentsList}>
+          <ul>
+            {appartment.equipments.map((equip, index) => {
+              return (
+                <li className={styled.collapseTxt} key={index}>
+                  {equip}
+                </li>
+              );
+            })}
+          </ul>
+        </Collapse>
       </div>
+      <Footer className={styled.footer} />
     </>
   );
 };

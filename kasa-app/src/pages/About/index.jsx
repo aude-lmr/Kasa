@@ -35,7 +35,9 @@ function About() {
       <Banner imgSrc={bannerAbout} />
       <div className={styled.container}>
         {aboutDatas.map(({ id, text, title }) => (
-          <Collapse key={id} text={text} title={title} />
+          <Collapse key={id} title={title}>
+            <p className={styled.collapseTxt}>{text} </p>
+          </Collapse>
         ))}
       </div>
 
