@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import bannerAbout from "../../assets/about-background.png";
 import { Collapse } from "../../components/Collapse";
 import styled from "../About/about.module.scss";
+import body from "../../index.module.scss";
 
 const aboutDatas = [
   {
@@ -31,16 +32,17 @@ const aboutDatas = [
 function About() {
   return (
     <>
-      <Header />
-      <Banner imgSrc={bannerAbout} />
-      <div className={styled.container}>
-        {aboutDatas.map(({ id, text, title }) => (
-          <Collapse key={id} title={title}>
-            <p className={styled.collapseTxt}>{text} </p>
-          </Collapse>
-        ))}
+      <div className={body.bodyContainer}>
+        <Header />
+        <Banner imgSrc={bannerAbout} />
+        <div className={styled.container}>
+          {aboutDatas.map(({ id, text, title }) => (
+            <Collapse key={id} title={title}>
+              <p className={styled.collapseTxt}>{text} </p>
+            </Collapse>
+          ))}
+        </div>
       </div>
-
       <Footer />
     </>
   );

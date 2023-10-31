@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   font-family: Montserrat, Helvetica, sans-serif;
   overflow-x: auto;
-  margin: 0 10%;
+  margin: 0;
 }
 `;
 

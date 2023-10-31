@@ -6,6 +6,7 @@ import Rating from "../../components/Rating";
 import styled from "../Appartment/appartment.module.scss";
 import Slideshow from "../../components/Slideshow";
 import Footer from "../../components/Footer";
+import body from "../../index.module.scss";
 
 export const Appartment = () => {
   const { id } = useParams();
@@ -15,57 +16,58 @@ export const Appartment = () => {
   }
   return (
     <>
-      <Header />
-      <Slideshow slides={appartment.pictures} />
+      <div className={body.bodyContainer}>
+        <Header />
+        <Slideshow slides={appartment.pictures} />
 
-      <section className={styled.apptInfosContainer}>
-        <div className={styled.apptInfos}>
-          <div className={styled.apptTitle}>
-            <h1 className={styled.apptName}>{appartment.title}</h1>
-            <p className={styled.location}>{appartment.location}</p>
+        <section className={styled.apptInfosContainer}>
+          <div className={styled.apptInfos}>
+            <div className={styled.apptTitle}>
+              <h1 className={styled.apptName}>{appartment.title}</h1>
+              <p className={styled.location}>{appartment.location}</p>
+            </div>
+            <div className={styled.apptTagsContainer}>
+              {appartment.tags.map((tags, index) => {
+                return (
+                  <p className={styled.tags} key={index}>
+                    {tags}
+                  </p>
+                );
+              })}
+            </div>
           </div>
-          <div className={styled.apptTagsContainer}>
-            {appartment.tags.map((tags, index) => {
-              return (
-                <p className={styled.tags} key={index}>
-                  {tags}
-                </p>
-              );
-            })}
+
+          <div className={styled.hostInfosContainer}>
+            <div className={styled.hostInfos}>
+              <p className={styled.hostName}>{appartment.host.name}</p>
+              <img
+                className={styled.hostPicture}
+                src={appartment && appartment.host.picture}
+                alt={appartment && appartment.host.name}
+              />
+            </div>
+            <Rating score={appartment && appartment.rating} />
           </div>
-        </div>
+        </section>
 
-        <div className={styled.hostInfosContainer}>
-          <div className={styled.hostInfos}>
-            <p className={styled.hostName}>{appartment.host.name}</p>
-            <img
-              className={styled.hostPicture}
-              src={appartment && appartment.host.picture}
-              alt={appartment && appartment.host.name}
-            />
-          </div>
-          <Rating score={appartment && appartment.rating} />
-        </div>
-      </section>
+        <section className={styled.collapseContainer}>
+          <Collapse title={"Description"}>
+            <p className={styled.collapseTxt}>{appartment.description}</p>
+          </Collapse>
 
-      <section className={styled.collapseContainer}>
-        <Collapse title={"Description"}>
-          <p className={styled.collapseTxt}>{appartment.description}</p>
-        </Collapse>
-
-        <Collapse title={"Equipements"} className={styled.equipmentsCollapse}>
-          <ul className={styled.equipList}>
-            {appartment.equipments.map((equip, index) => {
-              return (
-                <li className={styled.collapseTxt} key={index}>
-                  {equip}
-                </li>
-              );
-            })}
-          </ul>
-        </Collapse>
-      </section>
-
+          <Collapse title={"Equipements"} className={styled.equipmentsCollapse}>
+            <ul className={styled.equipList}>
+              {appartment.equipments.map((equip, index) => {
+                return (
+                  <li className={styled.collapseTxt} key={index}>
+                    {equip}
+                  </li>
+                );
+              })}
+            </ul>
+          </Collapse>
+        </section>
+      </div>
       <Footer className={styled.footer} />
     </>
   );

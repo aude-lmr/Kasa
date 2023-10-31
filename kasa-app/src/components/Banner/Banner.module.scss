@@ -1,7 +1,7 @@
 @import "../../utils/style/colors.scss";
 
 .bannerContainer {
-  margin: 50px 0 30px;
+  margin: 40px 0 30px;
   height: 200px;
   position: relative;
   width: 100%;
@@ -18,8 +18,8 @@
 }
 
 .text {
-  color: #fff;
-  font-size: 40px;
+  color: $text-color;
+  font-size: 38px;
   font-weight: normal;
   z-index: 1;
   position: absolute;
