@@ -31,8 +31,8 @@
   }
 
   & .arrow {
-    width: 95px;
-    height: 120px;
+    width: 37px;
+    height: 43px;
     position: absolute;
     top: 40%;
     cursor: pointer;
@@ -55,13 +55,14 @@
 @media screen and (max-width: 767px) {
   /* Styles spécifiques pour les petits écrans (mobiles) */
   .slideshow {
-    height: 550px;
+    height: 325px;
+    margin: 20px 0;
     & .slideshowSlide {
-      height: 550px;
+      height: 325px;
     }
 
     & .arrow {
-      top: 40%;
+      top: 49%;
     }
   }
 

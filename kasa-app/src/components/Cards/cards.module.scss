@@ -6,7 +6,7 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 80px 60px;
   grid-gap: 55px;
-  justify-items: center;
+
   background-color: $grey-background;
 }
 
@@ -54,8 +54,6 @@
   border-radius: 15px;
 }
 
-// iPad en mode portrait (768px de largeur et 1024px de hauteur)
-
 @media screen and (min-width: 1024px) and (max-width: 2128px) and (orientation: portrait) {
   .cardContainer {
     display: grid;
@@ -94,7 +92,7 @@
 
   .cardTitle {
     font-size: 27px;
-    left: 5px;
+    left: 30px;
     text-align: left;
   }
 }
@@ -108,6 +106,7 @@
     flex-direction: column;
     background-color: transparent;
     width: 100%;
+    gap: 25px;
   }
 
   .card {
@@ -123,7 +122,7 @@
   }
 
   .cardTitle {
-    font-size: 24px;
+    font-size: 17px;
     width: 72%;
   }
 }

@@ -20,14 +20,14 @@
 
 .location {
   font-size: 35px;
-  margin: 5px 0 35px 0;
+  margin: 5px 0 10px 0;
   color: $primary-color;
 }
 
 .hostInfos {
   display: flex;
   flex-direction: row;
-  margin-bottom: 50px;
+
   justify-content: flex-end;
 }
 
@@ -37,7 +37,7 @@
   position: relative;
   right: 20px;
   margin: 0;
-  width: 40%;
+  width: 42%;
   text-align: right;
   font-weight: 500;
 }
@@ -54,12 +54,12 @@
 .collapseContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 120px;
 }
 
 .collapseTxt {
   color: $primary-color;
-  font-size: 35px;
+  font-size: 18px;
   margin: 0;
   padding: 10px 0;
   list-style: none;
@@ -68,15 +68,16 @@
 .apptTagsContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tags {
   background-color: $primary-color;
   color: $text-color;
-  font-size: 31px;
-  margin-right: 20px;
-  padding: 15px;
-  border-radius: 20px;
+  font-size: 26px;
+  margin-right: 12px;
+  padding: 14px 26px;
+  border-radius: 25px;
 }
 
 .equipList {
@@ -98,6 +99,7 @@
   .collapseContainer {
     display: flex;
     flex-direction: column;
+    gap: 30px;
   }
 
   .hostInfosContainer {
@@ -141,9 +143,18 @@
     align-items: flex-start;
   }
 
+  .apptTitle {
+    margin-bottom: 5px;
+  }
+
   .collapseContainer {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .collapseTxt {
+    font-size: 16px;
   }
 
   .hostInfosContainer {
@@ -154,15 +165,35 @@
     justify-content: space-between;
   }
 
+  .hostInfos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .hostName {
-    font-size: 26px;
+    font-size: 14px;
+    right: 7px;
   }
   .hostPicture {
-    width: 100px;
+    width: 45px;
+  }
+
+  .location {
+    font-size: 15px;
+    font-weight: 600;
   }
 
   .tags {
-    font-size: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 7px;
+    margin-right: 10px;
+    padding: 10px 23px;
+  }
+  .apptName {
+    font-size: 23px;
   }
 }
 

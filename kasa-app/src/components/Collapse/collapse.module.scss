@@ -19,12 +19,12 @@ span {
 
 .title {
   color: $text-color;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .textContainer {
   background-color: #f6f6f6;
-  padding: 25px 20px 30px 20px;
+  padding: 25px 20px 50px 20px;
   margin-bottom: 20px;
 }
 
@@ -47,4 +47,17 @@ span {
 }
 
 @media screen and (max-width: 767px) {
+  .title {
+    color: $text-color;
+    font-size: 15px;
+  }
+
+  .collapseBtn {
+    height: 40px;
+    margin-top: 25px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
 }

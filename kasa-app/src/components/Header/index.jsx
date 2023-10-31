@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className={styled.navContainer}>
       <Link to={URL_HOMEPAGE}>
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo" className={styled.logo} />
       </Link>
       <nav>
         <div>
