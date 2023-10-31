@@ -1,8 +1,4 @@
-.collapseContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
+@import "../../utils/style/colors.scss";
 
 .apptInfosContainer {
   display: flex;
@@ -15,45 +11,54 @@
   margin-bottom: 30px;
 }
 
-.equipmentsList {
-  display: flex;
-  flex-direction: column;
-}
-
-.appartmentName,
-.location {
-  font-weight: normal;
-  color: #ff6060;
-}
-
-.appartmentName {
+.apptName {
   font-size: 50px;
+  font-weight: 600;
   margin: 0;
+  color: $primary-color;
 }
 
 .location {
   font-size: 35px;
   margin: 5px 0 35px 0;
+  color: $primary-color;
 }
 
 .hostInfos {
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
+  justify-content: flex-end;
 }
 
 .hostName {
-  font-size: 40px;
-  color: #ff6060;
+  font-size: 35px;
+  color: $primary-color;
   position: relative;
   right: 20px;
+  margin: 0;
+  width: 40%;
+  text-align: right;
+  font-weight: 500;
 }
 
 .hostPicture {
   border-radius: 50%;
 }
 
+.equipmentsCollapse {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapseContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .collapseTxt {
-  color: #ff6060;
+  color: $primary-color;
   font-size: 35px;
   margin: 0;
   padding: 10px 0;
@@ -66,10 +71,103 @@
 }
 
 .tags {
-  background-color: #ff6060;
-  color: #fff;
+  background-color: $primary-color;
+  color: $text-color;
   font-size: 31px;
-  margin-right: 30px;
-  padding: 15px 50px;
-  border-radius: 40px;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.equipList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1250px) and (orientation: portrait) {
+  .apptInfosContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apptName {
+    font-size: 40px;
+  }
+
+  .collapseContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hostInfosContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hostName {
+    font-size: 30px;
+    color: $primary-color;
+    position: relative;
+    right: 20px;
+    margin: 0;
+    width: 45%;
+    text-align: right;
+  }
+
+  .hostInfos {
+    justify-content: flex-end;
+  }
+
+  .hostName {
+    font-size: 30px;
+    right: 5%;
+  }
+  .hostPicture {
+    height: 75px;
+  }
+
+  .tags {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .apptInfosContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collapseContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hostInfosContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hostName {
+    font-size: 26px;
+  }
+  .hostPicture {
+    width: 100px;
+  }
+
+  .tags {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .collapseTxt {
+    font-size: 25px;
+  }
 }

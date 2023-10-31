@@ -18,43 +18,43 @@ export const Appartment = () => {
       <Header />
       <Slideshow slides={appartment.pictures} />
 
-      <section>
-        <div className={styled.apptInfosContainer}>
-          <div>
-            <div className={styled.apptTitle}>
-              <h1 className={styled.appartmentName}>{appartment.title}</h1>
-              <p className={styled.location}>{appartment.location}</p>
-            </div>
-            <div className={styled.apptTagsContainer}>
-              {appartment.tags.map((tags, index) => {
-                return (
-                  <p className={styled.tags} key={index}>
-                    {tags}
-                  </p>
-                );
-              })}
-            </div>
+      <section className={styled.apptInfosContainer}>
+        <div className={styled.apptInfos}>
+          <div className={styled.apptTitle}>
+            <h1 className={styled.apptName}>{appartment.title}</h1>
+            <p className={styled.location}>{appartment.location}</p>
           </div>
-          <div className={styled.hostInfosContainer}>
-            <div className={styled.hostInfos}>
-              <p className={styled.hostName}>{appartment.host.name}</p>
-              <img
-                className={styled.hostPicture}
-                src={appartment && appartment.host.picture}
-                alt={appartment && appartment.host.name}
-              />
-            </div>
-            <Rating score={appartment && appartment.rating} />
+          <div className={styled.apptTagsContainer}>
+            {appartment.tags.map((tags, index) => {
+              return (
+                <p className={styled.tags} key={index}>
+                  {tags}
+                </p>
+              );
+            })}
           </div>
         </div>
+
+        <div className={styled.hostInfosContainer}>
+          <div className={styled.hostInfos}>
+            <p className={styled.hostName}>{appartment.host.name}</p>
+            <img
+              className={styled.hostPicture}
+              src={appartment && appartment.host.picture}
+              alt={appartment && appartment.host.name}
+            />
+          </div>
+          <Rating score={appartment && appartment.rating} />
+        </div>
       </section>
-      <div className={styled.collapseContainer}>
+
+      <section className={styled.collapseContainer}>
         <Collapse title={"Description"}>
           <p className={styled.collapseTxt}>{appartment.description}</p>
         </Collapse>
 
-        <Collapse title={"Equipements"} className={styled.equipmentsList}>
-          <ul>
+        <Collapse title={"Equipements"} className={styled.equipmentsCollapse}>
+          <ul className={styled.equipList}>
             {appartment.equipments.map((equip, index) => {
               return (
                 <li className={styled.collapseTxt} key={index}>
@@ -64,7 +64,8 @@ export const Appartment = () => {
             })}
           </ul>
         </Collapse>
-      </div>
+      </section>
+
       <Footer className={styled.footer} />
     </>
   );

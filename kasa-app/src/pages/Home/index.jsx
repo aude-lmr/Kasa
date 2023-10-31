@@ -9,7 +9,7 @@ import styles from "../../components/Cards/cards.module.scss";
 function Home() {
   const { appartments } = useAppartments();
   return (
-    <div>
+    <>
       <Header />
       <Banner imgSrc={bannerHome} title={"Chez vous, partout et ailleurs"} />
       <div className={styles.cardContainer}>
@@ -18,7 +18,7 @@ function Home() {
         ))}
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

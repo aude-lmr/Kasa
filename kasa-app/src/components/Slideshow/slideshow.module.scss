@@ -40,14 +40,32 @@
   }
 
   & .left {
-    left: 0;
+    left: 2%;
   }
 
   & .right {
-    right: 0;
+    right: 2%;
   }
 
   & .none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Styles spécifiques pour les petits écrans (mobiles) */
+  .slideshow {
+    height: 550px;
+    & .slideshowSlide {
+      height: 550px;
+    }
+
+    & .arrow {
+      top: 40%;
+    }
+  }
+
+  .slideshowPagination {
     display: none;
   }
 }

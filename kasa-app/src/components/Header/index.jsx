@@ -1,4 +1,3 @@
-import { StyledLink } from "../../utils/style/shared-styles";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/LOGO.png";
 import styled from "./header.module.scss";
@@ -12,8 +11,13 @@ function Header() {
       </Link>
       <nav>
         <div>
-          <StyledLink to="/">Accueil</StyledLink>
-          <StyledLink to="/About"> A Propos</StyledLink>
+          <Link className={styled.headerLink} to="/">
+            Accueil
+          </Link>
+          <Link className={styled.headerLink} to="/About">
+            {" "}
+            A propos
+          </Link>
         </div>
       </nav>
     </div>

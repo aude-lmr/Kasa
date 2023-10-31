@@ -1,3 +1,5 @@
+@import "../../utils/style/colors.scss";
+
 .container {
   display: grid;
   place-items: center;
@@ -7,8 +9,24 @@
 }
 
 .collapseTxt {
-  color: #ff6060;
+  color: $primary-color;
   font-size: 35px;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .collapseTitle {
+    font-size: 30px;
+  }
+
+  .collapseTxt {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .collapseTxt {
+    font-size: 25px;
+  }
 }

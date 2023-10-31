@@ -1,15 +1,17 @@
+@import "../../utils/style/colors.scss";
+
 .cardContainer {
   border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 80px 60px;
-  grid-gap: 70px;
+  grid-gap: 55px;
   justify-items: center;
-  background-color: #f6f6f6;
+  background-color: $grey-background;
 }
 
 .card {
-  width: 500px;
+  width: 100%;
   height: 500px;
   border: 1px solid #ccc;
   position: relative;
@@ -21,12 +23,13 @@
 }
 
 .cardTitle {
-  font-size: 30px;
+  font-size: 27px;
   font-weight: normal;
   position: absolute;
   bottom: 5px;
   left: 20px;
-  color: white;
+  color: $text-color;
+  width: 58%;
 }
 
 .cardCover {
@@ -49,4 +52,78 @@
 .cardCover,
 .overlayClass::before {
   border-radius: 15px;
+}
+
+// iPad en mode portrait (768px de largeur et 1024px de hauteur)
+
+@media screen and (min-width: 1024px) and (max-width: 2128px) and (orientation: portrait) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .cardContainer {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    justify-items: center;
+    flex-direction: column;
+
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  .cardTitle {
+    font-size: 27px;
+    left: 5px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardContainer {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  .cardTitle {
+    font-size: 24px;
+    width: 72%;
+  }
 }
