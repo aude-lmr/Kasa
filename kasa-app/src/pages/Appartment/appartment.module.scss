@@ -12,14 +12,16 @@
 }
 
 .apptName {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 500;
   margin: 0;
   color: $primary-color;
+  line-height: 142.6%;
 }
 
 .location {
-  font-size: 35px;
+  font-size: 18px;
+  font-weight: 500;
   margin: 5px 0 10px 0;
   color: $primary-color;
 }
@@ -31,15 +33,14 @@
 .hostInfos {
   display: flex;
   flex-direction: row;
-
+  gap: 10px;
   justify-content: flex-end;
 }
 
 .hostName {
-  font-size: 30px;
+  font-size: 18px;
   color: $primary-color;
   position: relative;
-  right: 20px;
   margin: 0;
   width: 42%;
   text-align: right;
@@ -48,7 +49,8 @@
 
 .hostPicture {
   border-radius: 50%;
-  width: 100px;
+  width: 64px;
+  height: 64px;
 }
 
 .equipmentsCollapse {
@@ -64,9 +66,9 @@
 
 .collapseTxt {
   color: $primary-color;
-  font-size: 25px;
+  font-size: 18px;
   margin: 0;
-  padding: 10px 0;
+  padding-bottom: 5px;
   list-style: none;
 }
 
@@ -79,10 +81,11 @@
 .tags {
   background-color: $primary-color;
   color: $text-color;
-  font-size: 26px;
+  font-size: 14px;
   margin-right: 12px;
-  padding: 14px 26px;
-  border-radius: 13px;
+  padding: 5px 55px;
+  border-radius: 10px;
+  height: 15px;
 }
 
 .equipList {
@@ -182,26 +185,29 @@
   }
 
   .hostName {
-    font-size: 14px;
+    font-size: 12px;
     right: 7px;
+    font-weight: 600;
   }
   .hostPicture {
-    width: 45px;
+    width: 32px;
+    height: 32px;
   }
 
   .location {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
   }
 
   .tags {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
     margin-right: 10px;
-    padding: 10px 23px;
+    padding: 5px 20px;
   }
   .apptName {
-    font-size: 23px;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 

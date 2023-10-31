@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import Header from "../Header";
 import { URL_HOMEPAGE } from "../../routing/constants";
 import styled from ".//NotFound.module.scss";
+import Footer from "../Footer";
 
 function Error() {
   return (
     <>
       <Header />
+
       <div className={styled.container}>
         <h1 className={styled.error}>404</h1>
         <h2 className={styled.message}>
@@ -16,6 +18,8 @@ function Error() {
           Retour sur la page d'accueil
         </Link>
       </div>
+
+      <Footer />
     </>
   );
 }

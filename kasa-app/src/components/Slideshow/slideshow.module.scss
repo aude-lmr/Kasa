@@ -1,13 +1,13 @@
 .slideshow {
   width: 100%;
-  height: 800px;
+  height: 415px;
   position: relative;
   margin: 46px 0;
 
   & .slideshowSlide {
-    border-radius: 30px;
+    border-radius: 25px;
     width: 100%;
-    height: 800px;
+    height: 415px;
     object-fit: cover;
   }
   & .slideshowInactive {
@@ -24,17 +24,17 @@
       bottom: 30px;
       width: 50px;
       left: calc(50% - 20px);
-      font-size: 35px;
+      font-size: 18px;
       font-weight: 500;
       color: #fff;
     }
   }
 
   & .arrow {
-    width: 80px;
-    height: 185px;
+    width: 63px;
+    height: 300px;
     position: absolute;
-    top: 40%;
+    top: 15%;
     cursor: pointer;
     z-index: 1;
   }
@@ -55,16 +55,16 @@
 @media screen and (max-width: 767px) {
   /* Styles spécifiques pour les petits écrans (mobiles) */
   .slideshow {
-    height: 325px;
+    height: 255px;
     margin: 20px 0;
     & .slideshowSlide {
-      height: 325px;
+      height: 255px;
     }
 
     & .arrow {
-      top: 49%;
-      width: 37px;
-      height: 43px;
+      top: 32%;
+      width: 27px;
+      height: 57px;
     }
   }
 

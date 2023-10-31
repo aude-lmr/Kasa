@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 800px;
 }
 
 .error {
-  font-size: 270px;
+  font-size: 288px;
   font-weight: bold;
   margin: 0;
   position: absolute;
@@ -13,21 +14,47 @@
 }
 
 .message {
-  font-size: 40px;
+  font-size: 36px;
   margin: 0;
   position: absolute;
-  top: 60%;
-  font-weight: normal;
+  top: 76%;
+  font-weight: 500;
+  text-align: center;
 }
 
 .Link {
   font-size: 25px;
   position: absolute;
-  top: 80%;
+  top: 95%;
 }
 
 .error,
 .message,
 .Link {
   color: #ff6060;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    height: 500px;
+  }
+  .error {
+    font-size: 96px;
+    top: 30%;
+  }
+
+  .message {
+    font-size: 18px;
+    text-align: center;
+    top: 48%;
+    font-weight: 600;
+    line-height: 25.67px;
+    white-space: pre-line;
+  }
+
+  .Link {
+    font-size: 14px;
+    line-height: 19.96px;
+    top: 70%;
+  }
 }

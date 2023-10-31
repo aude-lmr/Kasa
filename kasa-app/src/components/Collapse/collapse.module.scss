@@ -19,7 +19,7 @@ span {
 
 .title {
   color: $text-color;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .textContainer {
@@ -37,7 +37,8 @@ span {
 
 .icon {
   color: $text-color;
-  font-size: 30px;
+  width: 32px;
+  height: 32px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -58,6 +59,7 @@ span {
   }
 
   .icon {
-    font-size: 18px;
+    width: 18.42px;
+    height: 18.42px;
   }
 }
