@@ -4,7 +4,7 @@
   border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 80px 60px;
+  padding: 50px;
   grid-gap: 55px;
 
   background-color: $grey-background;
@@ -12,7 +12,7 @@
 
 .card {
   width: 100%;
-  height: 500px;
+  height: 300px;
   border: 1px solid #ccc;
   position: relative;
   background: linear-gradient(
@@ -23,13 +23,12 @@
 }
 
 .cardTitle {
-  font-size: 27px;
+  font-size: 18px;
   font-weight: normal;
   position: absolute;
   bottom: 5px;
   left: 20px;
   color: $text-color;
-  width: 58%;
 }
 
 .cardCover {
@@ -111,7 +110,7 @@
 
   .card {
     width: 100%;
-    height: 300px;
+    height: 255px;
     border: 1px solid #ccc;
     position: relative;
     background: linear-gradient(
@@ -122,7 +121,7 @@
   }
 
   .cardTitle {
-    font-size: 17px;
+    font-size: 18px;
     width: 72%;
   }
 }

@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Banner imgSrc={bannerHome} title={"Chez vous, partout et ailleurs"} />
+      <Banner imgSrc={bannerHome} title={"Chez vous,\n partout et ailleurs"} />
       <div className={styles.cardContainer}>
         {appartments.map((appartment) => (
           <Cards appartment={appartment} key={appartment.id} />
