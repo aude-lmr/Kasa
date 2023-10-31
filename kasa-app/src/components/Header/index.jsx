@@ -11,12 +11,16 @@ function Header() {
       </Link>
       <nav>
         <div>
-          <Link className={styled.headerLink} to="/">
+          <Link
+            className={`${styled.headerLink} ${styled.spaceBetweenLink}`}
+            to="/"
+          >
             Accueil
           </Link>
+
           <Link className={styled.headerLink} to="/About">
             {" "}
-            A propos
+            A Propos
           </Link>
         </div>
       </nav>
