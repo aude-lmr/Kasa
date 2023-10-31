@@ -23,7 +23,11 @@
   margin: 5px 0 10px 0;
   color: $primary-color;
 }
-
+.hostInfosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
 .hostInfos {
   display: flex;
   flex-direction: row;
@@ -32,7 +36,7 @@
 }
 
 .hostName {
-  font-size: 35px;
+  font-size: 30px;
   color: $primary-color;
   position: relative;
   right: 20px;
@@ -44,6 +48,7 @@
 
 .hostPicture {
   border-radius: 50%;
+  width: 100px;
 }
 
 .equipmentsCollapse {
@@ -59,7 +64,7 @@
 
 .collapseTxt {
   color: $primary-color;
-  font-size: 18px;
+  font-size: 25px;
   margin: 0;
   padding: 10px 0;
   list-style: none;
@@ -77,7 +82,7 @@
   font-size: 26px;
   margin-right: 12px;
   padding: 14px 26px;
-  border-radius: 25px;
+  border-radius: 13px;
 }
 
 .equipList {
@@ -100,6 +105,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+
+  .collapseTxt {
+    font-size: 18px;
   }
 
   .hostInfosContainer {
@@ -188,7 +197,6 @@
   .tags {
     font-size: 11px;
     font-weight: 500;
-    border-radius: 7px;
     margin-right: 10px;
     padding: 10px 23px;
   }
