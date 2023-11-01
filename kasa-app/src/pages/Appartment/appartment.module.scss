@@ -101,13 +101,13 @@
   }
 
   .apptName {
-    font-size: 40px;
+    font-size: 26px;
   }
 
   .collapseContainer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
   }
 
   .collapseTxt {
@@ -120,6 +120,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    margin-top: 15px;
   }
 
   .hostName {
@@ -137,15 +138,19 @@
   }
 
   .hostName {
-    font-size: 30px;
-    right: 5%;
+    font-size: 20px;
   }
   .hostPicture {
-    height: 75px;
+    width: 45px;
+    height: 45px;
   }
 
   .tags {
-    font-size: 24px;
+    font-size: 14px;
+    padding: 11px 50px;
+    font-weight: 500;
+    font-weight: 500;
+    margin: 0 10px 0 0;
   }
 }
 
@@ -166,7 +171,7 @@
   }
 
   .collapseTxt {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .hostInfosContainer {
@@ -175,6 +180,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    margin-top: 15px;
   }
 
   .hostInfos {
@@ -202,8 +208,8 @@
   .tags {
     font-size: 10px;
     font-weight: 500;
-    margin-right: 10px;
-    padding: 5px 20px;
+    margin: 0 10px 0 0;
+    padding: 3px 20px;
   }
   .apptName {
     font-size: 18px;
@@ -213,6 +219,6 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .collapseTxt {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
