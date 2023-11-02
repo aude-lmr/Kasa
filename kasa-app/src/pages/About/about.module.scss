@@ -36,6 +36,9 @@
 
 /* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
+  .aboutBannerMobile {
+    height: 223px;
+  }
   .title {
     font-size: 20px;
   }

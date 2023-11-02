@@ -36,7 +36,7 @@ function About() {
     <>
       <div className={body.bodyContainer}>
         <Header />
-        <Banner imgSrc={bannerAbout} />
+        <Banner imgSrc={bannerAbout} className={styles.aboutBannerMobile} />
         {/* Container for displaying company values and services */}
         <div className={styles.container}>
           {aboutDatas.map(({ id, text, title }) => (
