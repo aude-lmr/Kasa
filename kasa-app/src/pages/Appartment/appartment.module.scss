@@ -79,6 +79,8 @@
 }
 
 .tags {
+  display: flex;
+  align-items: center;
   background-color: $primary-color;
   color: $text-color;
   font-size: 14px;

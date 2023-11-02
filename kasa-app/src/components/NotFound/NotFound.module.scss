@@ -1,3 +1,5 @@
+@import "../../utils/style/colors.scss";
+
 .container {
   display: flex;
   align-items: center;
@@ -31,7 +33,7 @@
 .error,
 .message,
 .Link {
-  color: #ff6060;
+  color: $primary-color;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {

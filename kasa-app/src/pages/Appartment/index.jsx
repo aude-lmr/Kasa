@@ -3,14 +3,15 @@ import { useAppartment } from "../../hooks/useAppartment";
 import { Collapse } from "../../components/Collapse";
 import Header from "../../components/Header";
 import Rating from "../../components/Rating";
-import styled from "../Appartment/appartment.module.scss";
+import styles from "../Appartment/appartment.module.scss";
 import Slideshow from "../../components/Slideshow";
 import Footer from "../../components/Footer";
-import body from "../../index.module.scss";
+import body from "../../utils/style/body.module.scss";
 
+// Define the Appartment component
 export const Appartment = () => {
-  const { id } = useParams();
-  const { appartment } = useAppartment(id);
+  const { id } = useParams(); // Get the "id" parameter from the URL
+  const { appartment } = useAppartment(id); // Use the custom hook to fetch appartment data based on the ID
   if (!appartment) {
     return null;
   }
@@ -19,47 +20,50 @@ export const Appartment = () => {
       <div className={body.bodyContainer}>
         <Header />
         <Slideshow slides={appartment.pictures} />
-
-        <section className={styled.apptInfosContainer}>
-          <div className={styled.apptInfos}>
-            <div className={styled.apptTitle}>
-              <h1 className={styled.apptName}>{appartment.title}</h1>
-              <p className={styled.location}>{appartment.location}</p>
+        {/* Section for displaying appartment information */}
+        <section className={styles.apptInfosContainer}>
+          <div className={styles.apptInfos}>
+            <div className={styles.apptTitle}>
+              <h1 className={styles.apptName}>{appartment.title}</h1>
+              <p className={styles.location}>{appartment.location}</p>
             </div>
-            <div className={styled.apptTagsContainer}>
+            {/* Container for appartment tags */}
+            <div className={styles.apptTagsContainer}>
               {appartment.tags.map((tags, index) => {
                 return (
-                  <p className={styled.tags} key={index}>
+                  <div className={styles.tags} key={index}>
                     {tags}
-                  </p>
+                  </div>
                 );
               })}
             </div>
           </div>
-
-          <div className={styled.hostInfosContainer}>
-            <div className={styled.hostInfos}>
-              <p className={styled.hostName}>{appartment.host.name}</p>
+          {/* Section for displaying host information */}
+          <div className={styles.hostInfosContainer}>
+            <div className={styles.hostInfos}>
+              <p className={styles.hostName}>{appartment.host.name}</p>
               <img
-                className={styled.hostPicture}
+                className={styles.hostPicture}
                 src={appartment && appartment.host.picture}
                 alt={appartment && appartment.host.name}
               />
             </div>
+            {/* Display the host's picture and name */}
             <Rating score={appartment && appartment.rating} />
           </div>
         </section>
-
-        <section className={styled.collapseContainer}>
+        {/* Section for displaying collapsible content */}
+        <section className={styles.collapseContainer}>
+          {/* Create a collapsible section with a title "Description" */}
           <Collapse title={"Description"}>
-            <p className={styled.collapseTxt}>{appartment.description}</p>
+            <p className={styles.collapseTxt}>{appartment.description}</p>
           </Collapse>
-
-          <Collapse title={"Equipements"} className={styled.equipmentsCollapse}>
-            <ul className={styled.equipList}>
+          {/* Create a collapsible section with a title "Equipements" */}
+          <Collapse title={"Equipements"} className={styles.equipmentsCollapse}>
+            <ul className={styles.equipList}>
               {appartment.equipments.map((equip, index) => {
                 return (
-                  <li className={styled.collapseTxt} key={index}>
+                  <li className={styles.collapseTxt} key={index}>
                     {equip}
                   </li>
                 );
@@ -68,7 +72,7 @@ export const Appartment = () => {
           </Collapse>
         </section>
       </div>
-      <Footer className={styled.footer} />
+      <Footer className={styles.footer} />
     </>
   );
 };

@@ -4,8 +4,9 @@ import Footer from "../../components/Footer";
 import bannerAbout from "../../assets/about-background.png";
 import { Collapse } from "../../components/Collapse";
 import styles from "../About/about.module.scss";
-import body from "../../index.module.scss";
+import body from "../../utils/style/body.module.scss";
 
+// Data about the company values and servicess
 const aboutDatas = [
   {
     id: 1,
@@ -29,16 +30,20 @@ const aboutDatas = [
   },
 ];
 
+// Define the About component
 function About() {
   return (
     <>
       <div className={body.bodyContainer}>
         <Header />
         <Banner imgSrc={bannerAbout} />
+        {/* Container for displaying company values and services */}
         <div className={styles.container}>
           {aboutDatas.map(({ id, text, title }) => (
             <Collapse key={id} title={title}>
-              <p className={styles.collapseTxt}>{text} </p>
+              {/* Create a collapsible section with a title based on the data */}
+              <p className={styles.collapseTxt}>{text} </p>{" "}
+              {/* Display the text related to each value or service */}
             </Collapse>
           ))}
         </div>
