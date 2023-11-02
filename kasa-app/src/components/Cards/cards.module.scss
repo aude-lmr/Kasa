@@ -53,6 +53,7 @@
   border-radius: 15px;
 }
 
+/* Media query for screens with a minimum width of 1024px and a maximum width of 2128px in portrait orientation */
 @media screen and (min-width: 1024px) and (max-width: 2128px) and (orientation: portrait) {
   .cardContainer {
     display: grid;
@@ -64,6 +65,7 @@
   }
 }
 
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .cardContainer {
     display: flex;
@@ -96,6 +98,7 @@
   }
 }
 
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
   .cardContainer {
     display: flex;

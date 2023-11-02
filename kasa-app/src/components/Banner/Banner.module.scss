@@ -28,6 +28,7 @@
   transform: translate(-50%, -50%);
 }
 
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
 @media screen and (min-width: 750px) and (max-width: 1024px) and (orientation: portrait) {
   .bannerContainer {
     height: 230px;
@@ -42,10 +43,11 @@
   }
 }
 
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
   .bannerContainer {
     margin: 15px 0 35px 0;
-    height: 111px;
+    height: 223px;
   }
 
   .text {

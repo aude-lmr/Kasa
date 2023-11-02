@@ -47,6 +47,7 @@ span {
   }
 }
 
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
   .title {
     color: $text-color;

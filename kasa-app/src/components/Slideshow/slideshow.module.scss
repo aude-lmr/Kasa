@@ -54,8 +54,8 @@
   }
 }
 
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
-  /* Styles spécifiques pour les petits écrans (mobiles) */
   .slideshow {
     height: 255px;
     margin: 20px 0;

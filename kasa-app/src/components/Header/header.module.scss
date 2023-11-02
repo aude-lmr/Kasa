@@ -27,6 +27,7 @@
   height: 50px;
 }
 
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .headerLink {
     font-size: 19px;
@@ -43,6 +44,7 @@
   }
 }
 
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
   .navContainer {
     height: 85px;
