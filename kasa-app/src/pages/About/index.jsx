@@ -3,7 +3,7 @@ import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import bannerAbout from "../../assets/about-background.png";
 import { Collapse } from "../../components/Collapse";
-import styled from "../About/about.module.scss";
+import styles from "../About/about.module.scss";
 import body from "../../index.module.scss";
 
 const aboutDatas = [
@@ -35,10 +35,10 @@ function About() {
       <div className={body.bodyContainer}>
         <Header />
         <Banner imgSrc={bannerAbout} />
-        <div className={styled.container}>
+        <div className={styles.container}>
           {aboutDatas.map(({ id, text, title }) => (
             <Collapse key={id} title={title}>
-              <p className={styled.collapseTxt}>{text} </p>
+              <p className={styles.collapseTxt}>{text} </p>
             </Collapse>
           ))}
         </div>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function Cards(props) {
   return (
     <Link to={URL_APPARTMENT.replace(":id", props.appartment.id)}>
+      {/* Create a link to a dynamic URL based on the appartment's ID */}
       <div className={styles.card}>
         <div className={styles.overlayClass}></div>
         <img

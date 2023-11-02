@@ -1,4 +1,4 @@
-import styles from "./Banner.module.scss";
+import styles from "./banner.module.scss";
 
 export const Banner = (props) => {
   return (

@@ -3,14 +3,17 @@ import left from "../../assets/arrow-left.svg";
 import right from "../../assets/arrow-right.svg";
 import styled from "../Slideshow/slideshow.module.scss";
 
+// Create the slideshow component
 const Slideshow = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const [current, setCurrent] = useState(0); // Use useState to manage the current state of the slideshow
+  const length = slides.length; // Calculate the length of the array of slides
 
+  // Function to move to the next slide
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  // Function to move to the previous slide
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
@@ -26,6 +29,8 @@ const Slideshow = ({ slides }) => {
         src={left}
         alt="précédent"
       />
+
+      {/* Loop over the slides and display each of them */}
       {slides.map((slide, index) => {
         return (
           <div
