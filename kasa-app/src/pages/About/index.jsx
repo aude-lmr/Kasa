@@ -6,12 +6,12 @@ import { Collapse } from "../../components/Collapse";
 import styles from "../About/about.module.scss";
 import body from "../../utils/style/body.module.scss";
 
-// Data about the company values and servicess
+// Data about the company values and services
 const aboutDatas = [
   {
     id: 1,
     title: "Fiabilité",
-    text: "Les annonces postées sur Kaza garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équies.",
+    text: "Les annonces postées sur Kaza garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.",
   },
   {
     id: 2,
